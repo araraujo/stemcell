@@ -99,16 +99,18 @@ public abstract class BaseApp implements BlockingOperationListener {
             instance = app;
 
             // Exibe splash screen
-            splash = new SSplashScreen(instance.getSplashScreenImage());
-            splash.setVisible(true);
+            if (instance.getSplashScreenImage() != null) {
+                //splash = new SSplashScreen(instance.getSplashScreenImage());
+                //splash.setVisible(true);
+                // Workaround para problema de não visualização da imagem do splash
+                //try {
+                //    final int sleepTime = 20;
+                //    Thread.sleep(sleepTime);
+                //} catch (InterruptedException ex) {
+                //    ex.printStackTrace(System.out);
+                //}
+            }    
 
-            // Workaround para problema de não visualização da imagem do splash
-            try {
-                final int sleepTime = 20;
-                Thread.sleep(sleepTime);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace(System.out);
-            }
         } catch (Exception e) { // SUPPRESS CHECKSTYLE Illegal Catch - Barreira de excecao
             DialogMessages.error(null, e.getMessage(), ExceptionUtil.getStackAsString(e));
             e.printStackTrace(System.out);
@@ -210,7 +212,7 @@ public abstract class BaseApp implements BlockingOperationListener {
     protected SimpleBundleNameStore createBundleNameStore() {
         SimpleBundleNameStore store = new SimpleBundleNameStore();
         store.setBundleNames(new String[]{"swing-base-messages",
-                                          "components-messages",});
+                                          "swing-components-messages",});
         return store;
     }
     
