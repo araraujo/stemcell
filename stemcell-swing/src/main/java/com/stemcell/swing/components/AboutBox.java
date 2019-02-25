@@ -122,7 +122,7 @@ public class AboutBox extends javax.swing.JDialog {
         jScrollPane1.setBounds(10, 70, 380, 150);
         layeredPane.add(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("fcorp-swing-components-messages"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("swing-components-messages"); // NOI18N
         jButton1.setText(bundle.getString("fcorp.swing.components.close")); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
