@@ -64,7 +64,7 @@ public class UnknownExceptionDialog extends FinalizeOnDisposeDialog {
         btVerReport = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("fcorp-swing-components-messages"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("swing-components-messages"); // NOI18N
         setTitle(bundle.getString("fcorp.swing.components.errorTitle")); // NOI18N
         setName("Form"); // NOI18N
 
